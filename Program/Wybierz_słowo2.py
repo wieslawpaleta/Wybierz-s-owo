@@ -9,9 +9,6 @@ while True:
     while True:    
         język = input("Wybierz język: ").strip().lower()
 
-        if język == "powrót":
-            import Główne_okno
-            break   
 
         if język == "en":
             print("Wybrałeś język angielski.")
@@ -43,6 +40,9 @@ while True:
         elif język == "tj":
             print("Wybrałeś język tajski.")
             break
+        elif język == "powrót":
+            import Główne_okno
+            break   
         else:
             print("Wybrany język jest nieobsługiwany.")
             

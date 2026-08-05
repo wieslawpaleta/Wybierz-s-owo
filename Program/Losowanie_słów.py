@@ -2,8 +2,8 @@ import random
 from slowniki import baza_jezykowa
 
 while True:
-    print("Wybierz język oraz trzy liczby całkowite z określonych zakresów, aby wygenerować listę słów")
-    print("Wpisz 'powrót', aby wrócić do głównego menu.")
+    print("Wylosuj słowo!")
+    print("Albo wpisz 'powrót', aby wrócić do głównego menu.")
     
     while True:    
         język = input("Wybierz język: ").strip().lower()
@@ -48,7 +48,7 @@ while True:
             
 
     while True:
-        print("Wylosuj słowo!")
+        
         gumbu = input("Czy chcesz wylosować słowo? (tak/nie): ").strip().lower()
         if gumbu == "tak":
             gamba = random.randint(1, 100)
