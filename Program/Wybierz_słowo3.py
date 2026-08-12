@@ -15,61 +15,66 @@ def wybierz_slowo():
 
             if język == "en":
                 print("Wybrałeś język angielski.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "ru":
                 print("Wybrałeś język rosyjski.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "es":
                 print("Wybrałeś język hiszpański.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "fr":
                 print("Wybrałeś język francuski.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "de":
                 print("Wybrałeś język niemiecki.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "ar":
                 print("Wybrałeś język arabski.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "ch":
                 print("Wybrałeś język chiński.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "kr":
                 print("Wybrałeś język koreański.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "jp":
                 print("Wybrałeś język japoński.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "tj":
                 print("Wybrałeś język tajski.")
-                break
+                return generuj_liste_slow(język, a=None, b=None, c=None)
             elif język == "powrót":
                 return Główne_okno.Główne_okno()   
             else:
                 print("Wybrany język jest nieobsługiwany.")
                 
             
+def generuj_liste_slow(język, a, b, c):
+        while True:
+            try:
+                print("Wybierz pierwszą liczbę od 1 do 100: ")
+                a = int(input())
+                print("Wybierz drugą liczbę od 1 do 100(musi być większa niż pierwsza): ")
+                b = int(input()) 
+                print("Wybierz trzecią liczbę od 1 do 3: ")
+                c = int(input())    
 
-    while True:
-        try:
-            print("Wybierz pierwszą liczbę od 1 do 100: ")
-            a = int(input())
-            print("Wybierz drugą liczbę od 1 do 100(musi być większa niż pierwsza): ")
-            b = int(input()) 
-            print("Wybierz trzecią liczbę od 1 do 3: ")
-            c = int(input())    
+                if 1 <= a <= 100 and 1 <= b <= 100 and a < b and 1 <= c <= 3:
+                    print("Twoja lista słów to: ")
+                    for i in range(a - 1, b, c):
+                        slowo_obce = baza_jezykowa[język][i]
+                        slowo_pl = baza_jezykowa["pl"][i]
+                
+                        print(slowo_obce, "-", slowo_pl)
+                    gothic = input("Czy chcesz stworzyć nową listę? (tak/nie): ").strip().lower()
+                    if gothic == "tak":
+                        return wybierz_slowo()
+                    elif gothic == "nie":
+                        pass
+                    else:
+                        pass
+                else:
+                    print("Wprowadzone liczby są nie spełniają warunków.")
 
-            if 1 <= a <= 100 and 1 <= b <= 100 and a < b and 1 <= c <= 3:
-                print("Twoja lista słów to: ")
-                for i in range(a - 1, b, c):
-                    slowo_obce = baza_jezykowa[język][i]
-                    slowo_pl = baza_jezykowa["pl"][i]
-            
-                    print(slowo_obce, "-", slowo_pl)
-
-                break
-            else:
-                print("Wprowadzone liczby są nie spełniają warunków.")
-
-        except ValueError:
-            print("Błąd! Musisz wpisać liczby całkowite, a nie litery. Spróbuj ponownie.\n")
+            except ValueError:
+                print("Błąd! Musisz wpisać liczby całkowite, a nie litery. Spróbuj ponownie.\n")
