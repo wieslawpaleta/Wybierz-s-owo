@@ -1,9 +1,9 @@
 #wersja 4.0
-
+import Losowanie_słów
 import Główne_okno
 from slowniki import baza_jezykowa
 
-
+    
 def wybierz_slowo():
     while True:
         print("Wybierz język oraz trzy liczby całkowite z określonych zakresów, aby wygenerować listę słów")
@@ -66,13 +66,25 @@ def generuj_liste_slow(język, a, b, c):
                         slowo_pl = baza_jezykowa["pl"][i]
                 
                         print(slowo_obce, "-", slowo_pl)
-                    gothic = input("Czy chcesz stworzyć nową listę? (tak/nie): ").strip().lower()
-                    if gothic == "tak":
-                        return wybierz_slowo()
-                    elif gothic == "nie":
-                        pass
-                    else:
-                        pass
+                    while True:     
+                        print("Wpisz 'Nowa lista', aby stworzyć nową listę.")
+                        print("Wpisz 'Losowanie', aby przejść do trybu losowania słowa.")
+                        print("Wpisz 'Powrót', aby wrócić do głównego menu.")
+                        print("Wpisz 'Wyjście', aby zakończyć program.")                      
+                        gothic = input("Co chcesz teraz zrobić?: ").strip().lower()                        
+
+                        if gothic == "Nowa lista":
+                            return wybierz_slowo()
+                        elif gothic == "Losowanie":
+                            return Losowanie_słów.Losowanie_słów()
+                        elif gothic == "Powrót":
+                            print("No to wracamy!")
+                            return Główne_okno.Główne_okno()
+                        elif gothic == "Wyjście":
+                            print("Do zobaczenia!")
+                            exit()
+                        else:
+                            print("Spróbuj jeszcze raz.")
                 else:
                     print("Wprowadzone liczby są nie spełniają warunków.")
 
