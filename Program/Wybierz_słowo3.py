@@ -73,14 +73,14 @@ def generuj_liste_slow(język, a, b, c):
                         print("Wpisz 'Wyjście', aby zakończyć program.")                      
                         gothic = input("Co chcesz teraz zrobić?: ").strip().lower()                        
 
-                        if gothic == "Nowa lista":
+                        if gothic == "nowa lista":
                             return wybierz_slowo()
-                        elif gothic == "Losowanie":
-                            return Losowanie_słów.Losowanie_słów()
-                        elif gothic == "Powrót":
+                        elif gothic == "losowanie":
+                            return Losowanie_słów.losuj_slowo()
+                        elif gothic == "powrót":
                             print("No to wracamy!")
                             return Główne_okno.Główne_okno()
-                        elif gothic == "Wyjście":
+                        elif gothic == "wyjście":
                             print("Do zobaczenia!")
                             exit()
                         else:

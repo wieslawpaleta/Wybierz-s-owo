@@ -1,6 +1,7 @@
 import random
 from slowniki import baza_jezykowa
 import Główne_okno
+import Wybierz_słowo3
 
 def losuj_slowo():
     while True:
@@ -59,12 +60,21 @@ def grzyb(język):
                     print("Wylosowane słowo to: \n" + slowo_obce + "-" + slowo_polskie)
             
             elif gumbu == "nie":
-                zmianawyjscie = input("Wpisz 'powrót' aby wrócić do menu głównego lub 'wyjście' aby zamknąć program: ").strip().lower()
-                if zmianawyjscie == "powrót":
+                
+                print("Wpisz 'Wybór słowa', aby przejść do trybu wyboru słowa.")
+                print("Wpisz 'Powrót', aby wrócić do głównego menu.")
+                print("Wpisz 'Wyjście', aby zakończyć program.")
+                print("Wpisz 'Nowe losowanie', aby zrobić nowe losowanie.")
+                kielbasa = input("Co chcesz teraz zrobić?: ").strip().lower()
+                if kielbasa == "wybór słowa":
+                    return Wybierz_słowo3.wybierz_slowo()
+                elif kielbasa == "powrót":
                     return Główne_okno.Główne_okno()
-                elif zmianawyjscie == "wyjście":
+                elif kielbasa == "wyjście":
                     print("Zamykanie programu. Do zobaczenia!")
                     exit()
+                elif kielbasa == "nowe losowanie":
+                    return losuj_slowo()
                 else:
                     print("Niepoprawna opcja. Spróbuj ponownie.")
             else:
