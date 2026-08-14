@@ -1,6 +1,6 @@
 
-import Losowanie_słów
-import Wybierz_słowo3
+import Losowanie
+import Lista
 
 def Główne_okno():
     print("Cześć! wybierz tryb, aby przejść dalej do programu.")
@@ -8,10 +8,10 @@ def Główne_okno():
     while True:
         try:
             if tryb.lower() == "losowanie":
-                return Losowanie_słów.losuj_slowo()
+                return Losowanie.poczatek_losowania()
                 
             elif tryb.lower() == "wybierz słowo":
-                return Wybierz_słowo3.wybierz_slowo()
+                return Lista.wybierz_slowo()
             
             elif tryb.lower() == "wyjście":
                 print("Do zobaczenia!")
