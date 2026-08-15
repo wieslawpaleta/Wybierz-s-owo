@@ -1,17 +1,18 @@
+#To jest plik odpowiedzialny za losowanie słów w różnych językach, które użytkownik może wybrać do nauki.
+
+
 import random
 from slowniki import baza_jezykowa
 import Główne_okno
 import Lista
 
+
 def poczatek_losowania():
     while True:
         print("Wylosuj słowo!")
         print("Albo wpisz 'powrót', aby wrócić do głównego menu.")
-        
         while True:    
             język = input("Wybierz język: ").strip().lower()  
-
-
             if język == "en":
                 print("Wybrałeś język angielski.")
                 return losowanie_slowa(język)
@@ -50,7 +51,6 @@ def poczatek_losowania():
                 
 def losowanie_slowa(język):
         while True:
-            
             gamba = input("Czy chcesz wylosować słowo? (tak/nie): ").strip().lower()
             if gamba == "tak":
                 maszyna = random.randint(1, 100)
@@ -58,9 +58,7 @@ def losowanie_slowa(język):
                     slowo_obce = baza_jezykowa[język][maszyna - 1]
                     slowo_polskie = baza_jezykowa["pl"][maszyna - 1]
                     print("Wylosowane słowo to: \n" + slowo_obce + "-" + slowo_polskie)
-            
             elif gamba == "nie":
-                
                 print("Wpisz 'Wybór słowa', aby przejść do trybu wyboru słowa.")
                 print("Wpisz 'Powrót', aby wrócić do głównego menu.")
                 print("Wpisz 'Wyjście', aby zakończyć program.")

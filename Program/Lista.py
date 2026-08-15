@@ -1,4 +1,7 @@
 #wersja 4.0
+#To jest plik odpowiedzialny za listę słów w różnych językach, które użytkownik może wybrać do nauki.
+
+
 import Losowanie
 import Główne_okno
 from slowniki import baza_jezykowa
@@ -8,11 +11,8 @@ def wybierz_slowo():
     while True:
         print("Wybierz język oraz trzy liczby całkowite z określonych zakresów, aby wygenerować listę słów")
         print("Wpisz 'powrót', aby wrócić do głównego menu.")
-        
         while True:    
             język = input("Wybierz język: ").strip().lower()
-
-
             if język == "en":
                 print("Wybrałeś język angielski.")
                 return generuj_liste_slow(język, a=None, b=None, c=None)
@@ -64,29 +64,27 @@ def generuj_liste_slow(język, a, b, c):
                     for i in range(a - 1, b, c):
                         slowo_obce = baza_jezykowa[język][i]
                         slowo_pl = baza_jezykowa["pl"][i]
-                
                         print(slowo_obce, "-", slowo_pl)
                     while True:     
                         print("Wpisz 'Nowa lista', aby stworzyć nową listę.")
                         print("Wpisz 'Losowanie', aby przejść do trybu losowania słowa.")
                         print("Wpisz 'Powrót', aby wrócić do głównego menu.")
                         print("Wpisz 'Wyjście', aby zakończyć program.")                      
-                        gothic = input("Co chcesz teraz zrobić?: ").strip().lower()                        
+                        сozrobic = input("Co chcesz teraz zrobić?: ").strip().lower()                        
 
-                        if gothic == "nowa lista":
+                        if сozrobic == "nowa lista":
                             return wybierz_slowo()
-                        elif gothic == "losowanie":
+                        elif сozrobic == "losowanie":
                             return Losowanie.poczatek_losowania()
-                        elif gothic == "powrót":
+                        elif сozrobic == "powrót":
                             print("No to wracamy!")
                             return Główne_okno.Główne_okno()
-                        elif gothic == "wyjście":
+                        elif сozrobic == "wyjście":
                             print("Do zobaczenia!")
                             exit()
                         else:
                             print("Spróbuj jeszcze raz.")
                 else:
                     print("Wprowadzone liczby są nie spełniają warunków.")
-
             except ValueError:
                 print("Błąd! Musisz wpisać liczby całkowite, a nie litery. Spróbuj ponownie.\n")
