@@ -1,45 +1,50 @@
 import random
 from slowa_wordle import slowa
 
-print("Wital w grze Wordle!")
-print("Zgadnij słowo w 6 próbach.")
+def jeden():
+    
+    print("Wital w grze Wordle!")
+    print("Zgadnij sześcioliterowe słowo w sześciu próbach.")
 
-słowo = random.choice(slowa)
+    słowo = random.choice(slowa).lower()
+    print(słowo)
+    tajemnicze_słowo = słowo
 
-pierwsza_próba = input("Podaj swoje pierwsze słowo: ")
+    zakreskowane_slowo = ["_"] * len(tajemnicze_słowo)
 
-druga_próba = input("Podaj swoje drugie słowo: ")
+    proby = 0
+    max_prob = 10
 
-trzecia_próba = input("Podaj swoje trzecie słowo: ")
+    while proby < max_prob:
 
-czwarta_próba = input("Podaj swoje czwarte słowo: ")
+        pierwsza_próba = input(f"\nPróba {proby + 1}/{max_prob} Podaj literę: ").lower()
 
-piąta_próba = input("Podaj swoje piąte słowo: ")
+        if len(pierwsza_próba) != 1 or not pierwsza_próba.isalpha():
+                    print("Podaj jedną literę (bez cyfr i symboli)!")
+                    continue
+        
 
-szósta_próba = input("Podaj swoje szóste słowo: ")
+        for i in range(len(tajemnicze_słowo)):
+            if pierwsza_próba == tajemnicze_słowo[i]:
+                zakreskowane_slowo[i] = pierwsza_próba        
+            
 
-if pierwsza_próba == słowo:
-    print("Gratulacje! Zgadłeś słowo w pierwszej próbie!")  
-elif druga_próba == słowo:
-    print("Gratulacje! Zgadłeś słowo w drugiej próbie!")  
-elif trzecia_próba == słowo:
-    print("Gratulacje! Zgadłeś słowo w trzeciej próbie!")
-elif czwarta_próba == słowo:
-    print("Gratulacje! Zgadłeś słowo w czwartej próbie!")
-elif piąta_próba == słowo:
-    print("Gratulacje! Zgadłeś słowo w piątej próbie!")
-elif szósta_próba == słowo:
-    print("Gratulacje! Zgadłeś słowo w szóstej próbie!")    
-else:
-    print(f"Niestety, nie udało Ci się zgadnąć słowa. Prawidłowe słowo to: {słowo}")
+            wynik_wyswietlany = " ".join(zakreskowane_slowo)
+            print("Aktualny stan słowa:", wynik_wyswietlany)
+            
+        
+        if "_" not in zakreskowane_slowo:
+            print("\nGratulacje! Odgadłeś słowo!")
+            return
 
+        proby += 1
 
-
-
-
-
+    print(f"\nPrzegrałeś! Tajemniczym słowem było: {tajemnicze_słowo}")
 
 
+if __name__ == "__main__":
+    jeden() 
+     
 
 
 
