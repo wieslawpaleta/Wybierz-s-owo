@@ -5,7 +5,7 @@
 import Losowanie
 import Główne_okno
 from slowniki import baza_jezykowa
-
+import Zgadywanka
     
 def wybierz_slowo():
     while True:
@@ -68,6 +68,7 @@ def generuj_liste_slow(język, a, b, c):
                     while True:     
                         print("Wpisz 'Nowa lista', aby stworzyć nową listę.")
                         print("Wpisz 'Losowanie', aby przejść do trybu losowania słowa.")
+                        print("Wpisz 'Zgadywanka', aby przejść do trybu zgadywania.")
                         print("Wpisz 'Powrót', aby wrócić do głównego menu.")
                         print("Wpisz 'Wyjście', aby zakończyć program.")                      
                         сozrobic = input("Co chcesz teraz zrobić?: ").strip().lower()                        
@@ -76,6 +77,8 @@ def generuj_liste_slow(język, a, b, c):
                             return wybierz_slowo()
                         elif сozrobic == "losowanie":
                             return Losowanie.poczatek_losowania()
+                        elif сozrobic == "zgadywanka":
+                            return Zgadywanka.zgadnij()
                         elif сozrobic == "powrót":
                             print("No to wracamy!")
                             return Główne_okno.Główne_okno()

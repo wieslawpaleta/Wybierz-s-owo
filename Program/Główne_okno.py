@@ -3,17 +3,20 @@
 
 import Losowanie
 import Lista
+import Zgadywanka
 
 
 def Główne_okno():
     print("Cześć! wybierz tryb, aby przejść dalej do programu.")
-    tryb = input("Wybierz tryb \"Losowanie\" albo \"Wybierz słowo\" albo \"Wyjście\": ")
+    tryb = input("Wybierz tryb \"Losowanie\" albo \"Wybierz słowo\" albo \"Zgadywanka\" albo \"Wyjście\": ")
     while True:
         try:
             if tryb.lower() == "losowanie":
                 return Losowanie.poczatek_losowania()   
             elif tryb.lower() == "wybierz słowo":
                 return Lista.wybierz_slowo()
+            elif tryb.lower() == "zgadywanka":
+                return Zgadywanka.zgadnij()
             elif tryb.lower() == "wyjście":
                 print("Do zobaczenia!")
                 exit()

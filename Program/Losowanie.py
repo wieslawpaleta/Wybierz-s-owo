@@ -5,6 +5,7 @@ import random
 from slowniki import baza_jezykowa
 import Główne_okno
 import Lista
+import Zgadywanka
 
 
 def poczatek_losowania():
@@ -60,12 +61,15 @@ def losowanie_slowa(język):
                     print("Wylosowane słowo to: \n" + slowo_obce + "-" + slowo_polskie)
             elif gamba == "nie":
                 print("Wpisz 'Wybór słowa', aby przejść do trybu wyboru słowa.")
+                print("Wpisz 'Zgadywanka', aby przejść do trybu zgadywania.")
                 print("Wpisz 'Powrót', aby wrócić do głównego menu.")
                 print("Wpisz 'Wyjście', aby zakończyć program.")
                 print("Wpisz 'Nowe losowanie', aby zrobić nowe losowanie.")
                 lufa_pytanie = input("Co chcesz teraz zrobić?: ").strip().lower()
                 if lufa_pytanie == "wybór słowa":
                     return Lista.wybierz_slowo()
+                elif lufa_pytanie == "zgadywanka":
+                    return Zgadywanka.zgadnij()
                 elif lufa_pytanie == "powrót":
                     return Główne_okno.Główne_okno()
                 elif lufa_pytanie == "wyjście":
