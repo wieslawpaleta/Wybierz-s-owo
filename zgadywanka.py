@@ -1,0 +1,119 @@
+#Import potrzebnych elementów.
+import random
+from słownik_zgadywanka import zbiór_słów
+import główne_okno
+import lista
+import losowanie
+
+
+def zgadnij():
+
+    
+    print("Witaj w zgadywance!")
+    print("Zgadnij słowo w dziesięciu próbach.")
+
+
+    słowo = random.choice(zbiór_słów).lower()
+
+
+    #Na wypadek testów.
+    #print(słowo)
+    tajemnicze_słowo = słowo
+    zakreskowane_slowo = ["_"] * len(tajemnicze_słowo)
+
+
+    próby = 0
+    max_prób = 10
+
+
+    #Pętla zgadywania słowa z możliwością powrótu do głównego menu oraz zakończenia działania programu.
+    while próby < max_prób:
+
+
+        próba = input(f"\nPróba {próby + 1}/{max_prób} Podaj literę albo zgadnij słowo albo wpisz \"Wyjście\", aby wyjść z programu albo \"Powrót\", aby powróć do głównego okna: ").lower()
+
+
+        if próba.lower() == "wyjście":
+            print("Do zobaczenia!")
+            exit()
+
+            
+        if próba.lower() == "powrót":
+            return główne_okno.główne_okno()
+            
+
+        if próba == tajemnicze_słowo:
+            print("Brawo! Odgadłeś słowo!")
+            break
+
+
+        if len(próba) != 1 or not próba.isalpha():
+            print("Podaj jedną literę (bez cyfr i symboli)!")
+            continue
+
+        
+
+        for i in range(len(tajemnicze_słowo)):
+            if próba == tajemnicze_słowo[i]:
+                zakreskowane_slowo[i] = próba        
+            
+
+        wynik_wyswietlany = " ".join(zakreskowane_slowo)
+        print("Aktualny stan słowa:", wynik_wyswietlany)
+            
+        
+        if "_" not in zakreskowane_slowo:
+            print("\nGratulacje! Odgadłeś słowo!")
+            break
+
+
+        próby += 1
+
+
+    else:
+        print(f"\nPrzegrałeś! Słowem było: {tajemnicze_słowo} \n")
+
+
+    #Pętła wyboru trybów.
+    while True:   
+
+
+        print("Wpisz 'Zgadywanka', aby raz jeszcze zgadnąć słowo.")
+        print("Wpisz 'Losowanie', aby przejść do trybu losowania słowa.")
+        print("Wpisz 'Lista', aby przejść do trybu listy.")
+        print("Wpisz 'Powrót', aby wrócić do głównego menu.")
+        print("Wpisz 'Wyjście', aby zakończyć program.")   
+
+           
+        сozrobic = input("Co chcesz teraz zrobić?: ").strip().lower()  
+
+              
+        if сozrobic == "zgadywanka":
+            return zgadnij()
+
+        
+        elif сozrobic == "lista":
+            return lista.wybierz_slowo()
+
+        
+        elif сozrobic == "losowania":
+            return losowanie.poczatek_losowania()
+
+        
+        elif сozrobic == "powrót":
+            print("No to wracamy!")
+            return główne_okno.główne_okno()
+
+        
+        elif сozrobic == "wyjście":
+            print("Do zobaczenia!")
+            exit()
+
+
+        else:
+            print("Spróbuj jeszcze raz.")
+
+     
+
+
+
