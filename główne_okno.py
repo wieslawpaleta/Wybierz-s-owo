@@ -8,8 +8,8 @@ import zgadywanka
 def główne_okno():
 
 
-    print("Cześć! wybierz tryb, aby przejść dalej do programu.")
-    tryb = input("Wybierz tryb \"Losowanie\" albo \"Wybierz słowo\" albo \"Zgadywanka\" albo \"Wyjście\": ")
+    print("Cześć!")
+    tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\", \"Wybierz słowo\", \"Zgadywanka\", \"Wyjście\": ")
 
 
     while True:

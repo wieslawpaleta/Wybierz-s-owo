@@ -14,7 +14,7 @@ def poczatek_losowania():
 
 
         print("Wylosuj słowo!")
-        print("albo wpisz \"Wyjście\", aby wyjść z programu albo \"Powrót\", aby powróć do głównego okna.")
+        print("Albo wpisz \"Powrót\", aby powrócić do głównego menu, albo \"Wyjście\", aby wyjść z programu.")
 
 
         while True:    
@@ -71,15 +71,15 @@ def poczatek_losowania():
             elif język == "tj":
                 print("Wybrałeś język tajski.")
                 return losowanie_slowa(język)
+            
+            
+            elif język == "powrót":
+                return główne_okno.główne_okno()
 
 
             elif język == "wyjście":
                 print("Zamykanie programu. Do zobaczenia!")
                 exit()
-
-            
-            elif język == "powrót":
-                return główne_okno.główne_okno()
 
             
             else:
@@ -108,15 +108,19 @@ def losowanie_slowa(język):
             elif gamba == "nie":
 
 
-                print("Wpisz 'Wybór słowa', aby przejść do trybu wyboru słowa.")
+                print("Wpisz 'Losowanie', aby rozpocząć nowe losowanie.")    
+                print("Wpisz 'Lista', aby przejść do trybu listy.")
                 print("Wpisz 'Zgadywanka', aby przejść do trybu zgadywania.")
                 print("Wpisz 'Powrót', aby wrócić do głównego menu.")
-                print("Wpisz 'Wyjście', aby zakończyć program.")
-                print("Wpisz 'Nowe losowanie', aby zrobić nowe losowanie.")
+                print("Wpisz 'Wyjście', aby zakończyć działanie programu.")
                 lufa_pytanie = input("Co chcesz teraz zrobić?: ").strip().lower()
 
 
-                if lufa_pytanie == "wybór słowa":
+                if lufa_pytanie == "losowanie":
+                    return poczatek_losowania()
+               
+
+                elif lufa_pytanie == "wybór słowa":
                     return lista.wybierz_slowo()
 
                 
@@ -129,13 +133,9 @@ def losowanie_slowa(język):
 
                 
                 elif lufa_pytanie == "wyjście":
-                    print("Zamykanie programu. Do zobaczenia!")
+                    print("Do zobaczenia!")
                     exit()
-
-
-                elif lufa_pytanie == "nowe losowanie":
-                    return poczatek_losowania()
-
+            
                 
                 else:
                     print("Niepoprawna opcja. Spróbuj ponownie.")

@@ -9,7 +9,6 @@ import losowanie
 def zgadnij():
 
     
-    print("Witaj w zgadywance!")
     print("Zgadnij słowo w dziesięciu próbach.")
 
 
@@ -30,7 +29,7 @@ def zgadnij():
     while próby < max_prób:
 
 
-        próba = input(f"\nPróba {próby + 1}/{max_prób} Podaj literę albo zgadnij słowo albo wpisz \"Wyjście\", aby wyjść z programu albo \"Powrót\", aby powróć do głównego okna: ").lower()
+        próba = input(f"\nPróba {próby + 1}/{max_prób} Podaj literę albo zgadnij słowo, albo wpisz \"Powrót\", aby powrócić do głównego okna, albo \"Wyjście\", aby zakończyć działanie programu: ").lower()
 
 
         if próba.lower() == "wyjście":
@@ -79,12 +78,10 @@ def zgadnij():
 
 
         print("Wpisz 'Zgadywanka', aby raz jeszcze zgadnąć słowo.")
-        print("Wpisz 'Losowanie', aby przejść do trybu losowania słowa.")
+        print("Wpisz 'Losowanie', aby przejść do trybu losowania.")
         print("Wpisz 'Lista', aby przejść do trybu listy.")
         print("Wpisz 'Powrót', aby wrócić do głównego menu.")
-        print("Wpisz 'Wyjście', aby zakończyć program.")   
-
-           
+        print("Wpisz 'Wyjście', aby zakończyć działanie programu.")               
         сozrobic = input("Co chcesz teraz zrobić?: ").strip().lower()  
 
               

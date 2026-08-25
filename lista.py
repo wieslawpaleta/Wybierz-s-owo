@@ -14,7 +14,7 @@ def wybierz_slowo():
 
 
         print("Wybierz język oraz trzy liczby całkowite z określonych zakresów, aby wygenerować listę słów.")
-        print("Wpisz 'powrót', aby wrócić do głównego menu albo 'Wyjśćie', zakończyć działanie programu.")
+        print("Wpisz 'Powrót', aby wrócić do głównego menu albo 'Wyjśćie', zakończyć działanie programu.")
 
 
         while True:    
@@ -116,15 +116,15 @@ def generuj_liste_slow(język, a, b, c):
                     while True:     
 
 
-                        print("Wpisz 'Nowa lista', aby stworzyć nową listę.")
-                        print("Wpisz 'Losowanie', aby przejść do trybu losowania słowa.")
+                        print("Wpisz 'Lista', aby stworzyć nową listę.")
+                        print("Wpisz 'Losowanie', aby przejść do trybu losowania.")
                         print("Wpisz 'Zgadywanka', aby przejść do trybu zgadywania.")
                         print("Wpisz 'Powrót', aby wrócić do głównego menu.")
-                        print("Wpisz 'Wyjście', aby zakończyć program.")                      
+                        print("Wpisz 'Wyjście', aby zakończyć działanie programu.")                      
                         сozrobic = input("Co chcesz teraz zrobić?: ").strip().lower()                        
 
 
-                        if сozrobic == "nowa lista":
+                        if сozrobic == "lista":
                             return wybierz_slowo()
 
                         
@@ -155,4 +155,4 @@ def generuj_liste_slow(język, a, b, c):
 
 
             except ValueError:
-                print("Błąd! Musisz wpisać liczby całkowite, a nie litery. Spróbuj ponownie.\n")
+                print("Błąd! Musisz wpisać liczby całkowite. Spróbuj ponownie.\n")
