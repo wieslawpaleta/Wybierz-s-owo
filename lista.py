@@ -7,7 +7,7 @@ import zgadywanka
 
 
 #Tutaj dokonuje się wybór języka.    
-def wybierz_slowo():
+def wybierz_słowo():
 
 
     while True:
@@ -25,52 +25,52 @@ def wybierz_slowo():
 
             if język == "en":
                 print("Wybrałeś język angielski.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "ru":
                 print("Wybrałeś język rosyjski.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "es":
                 print("Wybrałeś język hiszpański.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "fr":
                 print("Wybrałeś język francuski.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "de":
                 print("Wybrałeś język niemiecki.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "ar":
                 print("Wybrałeś język arabski.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "ch":
                 print("Wybrałeś język chiński.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "kr":
                 print("Wybrałeś język koreański.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "jp":
                 print("Wybrałeś język japoński.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "tj":
                 print("Wybrałeś język tajski.")
-                return generuj_liste_slow(język, a=None, b=None, c=None)
+                return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "powrót":
@@ -87,7 +87,7 @@ def wybierz_slowo():
                 
 
 #Tutaj tworzy się lista.         
-def generuj_liste_slow(język, a, b, c):
+def generuj_listę_słów(język, a, b, c):
 
         
         while True:
@@ -107,9 +107,9 @@ def generuj_liste_slow(język, a, b, c):
                 if 1 <= a <= 100 and 1 <= b <= 100 and a < b and 1 <= c <= 3:
                     print("Twoja lista słów to: ")
                     for i in range(a - 1, b, c):
-                        slowo_obce = słowniki[język][i]
-                        slowo_pl = słowniki["pl"][i]
-                        print(slowo_obce, "-", slowo_pl)
+                        słowo_obce = słowniki[język][i]
+                        słowo_pl = słowniki["pl"][i]
+                        print(słowo_obce, "-", słowo_pl)
 
 
                     #Tutaj dokonuje się wybór o przyszłości.    
@@ -121,27 +121,27 @@ def generuj_liste_slow(język, a, b, c):
                         print("Wpisz 'Zgadywanka', aby przejść do trybu zgadywania.")
                         print("Wpisz 'Powrót', aby wrócić do głównego menu.")
                         print("Wpisz 'Wyjście', aby zakończyć działanie programu.")                      
-                        сozrobic = input("Co chcesz teraz zrobić?: ").strip().lower()                        
+                        сozrobić = input("Co chcesz teraz zrobić?: ").strip().lower()                        
 
 
-                        if сozrobic == "lista":
-                            return wybierz_slowo()
-
-                        
-                        elif сozrobic == "losowanie":
-                            return losowanie.poczatek_losowania()
+                        if сozrobić == "lista":
+                            return wybierz_słowo()
 
                         
-                        elif сozrobic == "zgadywanka":
+                        elif сozrobić == "losowanie":
+                            return losowanie.początek_losowania()
+
+                        
+                        elif сozrobić == "zgadywanka":
                             return zgadywanka.zgadnij()
 
                         
-                        elif сozrobic == "powrót":
+                        elif сozrobić == "powrót":
                             print("No to wracamy!")
                             return główne_okno.główne_okno()
 
                         
-                        elif сozrobic == "wyjście":
+                        elif сozrobić == "wyjście":
                             print("Do zobaczenia!")
                             exit()
 

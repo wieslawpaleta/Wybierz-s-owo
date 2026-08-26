@@ -7,7 +7,7 @@ import zgadywanka
 
 
 #Tutaj dokonuje się wybór języka.
-def poczatek_losowania():
+def początek_losowania():
 
 
     while True:
@@ -25,52 +25,52 @@ def poczatek_losowania():
 
             if język == "en":
                 print("Wybrałeś język angielski.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
 
             
             elif język == "ru":
                 print("Wybrałeś język rosyjski.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
 
             
             elif język == "es":
                 print("Wybrałeś język hiszpański.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
 
             
             elif język == "fr":
                 print("Wybrałeś język francuski.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
 
             
             elif język == "de":
                 print("Wybrałeś język niemiecki.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
 
             
             elif język == "ar":
                 print("Wybrałeś język arabski.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
 
             
             elif język == "ch":
                 print("Wybrałeś język chiński.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
 
             
             elif język == "kr":
                 print("Wybrałeś język koreański.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
 
             
             elif język == "jp":
                 print("Wybrałeś język japoński.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
 
             
             elif język == "tj":
                 print("Wybrałeś język tajski.")
-                return losowanie_slowa(język)
+                return losowanie_słowa(język)
             
             
             elif język == "powrót":
@@ -87,7 +87,7 @@ def poczatek_losowania():
                 
 
 #Tutaj dokonuje się losowanie słowa.                
-def losowanie_slowa(język):
+def losowanie_słowa(język):
 
         
         while True:
@@ -99,9 +99,9 @@ def losowanie_slowa(język):
             if gamba == "tak":
                 maszyna = random.randint(1, 100)
                 if 1 <= maszyna <= 100:
-                    slowo_obce = słowniki[język][maszyna - 1]
-                    slowo_polskie = słowniki["pl"][maszyna - 1]
-                    print("Wylosowane słowo to: \n" + slowo_obce + "-" + slowo_polskie)
+                    słowo_obce = słowniki[język][maszyna - 1]
+                    słowo_polskie = słowniki["pl"][maszyna - 1]
+                    print("Wylosowane słowo to: \n" + słowo_obce + "-" + słowo_polskie)
 
 
             #Tutaj można wybrać tryb, wrócić do głównego okna lub wyjść z programu.
@@ -117,11 +117,11 @@ def losowanie_slowa(język):
 
 
                 if lufa_pytanie == "losowanie":
-                    return poczatek_losowania()
+                    return początek_losowania()
                
 
                 elif lufa_pytanie == "wybór słowa":
-                    return lista.wybierz_slowo()
+                    return lista.wybierz_słowo()
 
                 
                 elif lufa_pytanie == "zgadywanka":

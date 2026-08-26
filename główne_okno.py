@@ -1,4 +1,5 @@
-# To jest główne okno programu, w którym użytkownik wybiera tryb działania programu.
+#To jest główne okno, w którym użytkownik wybiera tryb działania programu.
+#Tutaj znajdują się potrzebne importy.
 import losowanie
 import lista
 import zgadywanka
@@ -17,11 +18,11 @@ def główne_okno():
 
         try:
             if tryb.lower() == "losowanie":
-                return losowanie.poczatek_losowania()  
+                return losowanie.początek_losowania()  
 
              
             elif tryb.lower() == "wybierz słowo":
-                return lista.wybierz_slowo()
+                return lista.wybierz_słowo()
 
             
             elif tryb.lower() == "zgadywanka":
@@ -34,7 +35,7 @@ def główne_okno():
 
                 
             else:
-                print("Masz ostatnie ostrzeżenie w tej chwili, \nmasz ostatnie ostrzeżenie!")
+                print("Masz ostatnie ostrzeżenie w tej chwili,\nmasz ostatnie ostrzeżenie!")
                 tryb = input("Wybierz tryb \"Losowanie\" albo \"Wybierz słowo\" albo \"Wyjście\": ")
 
 

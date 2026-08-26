@@ -6,6 +6,7 @@ import lista
 import losowanie
 
 
+#Tu zaczyna się gra.
 def zgadnij():
 
     
@@ -18,7 +19,7 @@ def zgadnij():
     #Na wypadek testów.
     #print(słowo)
     tajemnicze_słowo = słowo
-    zakreskowane_slowo = ["_"] * len(tajemnicze_słowo)
+    zakreskowane_słowo = ["_"] * len(tajemnicze_słowo)
 
 
     próby = 0
@@ -47,21 +48,21 @@ def zgadnij():
 
 
         if len(próba) != 1 or not próba.isalpha():
-            print("Podaj jedną literę (bez cyfr i symboli)!")
+            print("Podaj jedną literę albo słowo (bez cyfr i symboli)!")
             continue
 
         
 
         for i in range(len(tajemnicze_słowo)):
             if próba == tajemnicze_słowo[i]:
-                zakreskowane_slowo[i] = próba        
+                zakreskowane_słowo[i] = próba        
             
 
-        wynik_wyswietlany = " ".join(zakreskowane_slowo)
-        print("Aktualny stan słowa:", wynik_wyswietlany)
+        wynik_wyświetlany = " ".join(zakreskowane_słowo)
+        print("Aktualny stan słowa:", wynik_wyświetlany)
             
         
-        if "_" not in zakreskowane_slowo:
+        if "_" not in zakreskowane_słowo:
             print("\nGratulacje! Odgadłeś słowo!")
             break
 
@@ -82,27 +83,27 @@ def zgadnij():
         print("Wpisz 'Lista', aby przejść do trybu listy.")
         print("Wpisz 'Powrót', aby wrócić do głównego menu.")
         print("Wpisz 'Wyjście', aby zakończyć działanie programu.")               
-        сozrobic = input("Co chcesz teraz zrobić?: ").strip().lower()  
+        сozrobić = input("Co chcesz teraz zrobić?: ").strip().lower()  
 
               
-        if сozrobic == "zgadywanka":
+        if сozrobić == "zgadywanka":
             return zgadnij()
 
         
-        elif сozrobic == "lista":
-            return lista.wybierz_slowo()
+        elif сozrobić == "lista":
+            return lista.wybierz_słowo()
 
         
-        elif сozrobic == "losowania":
-            return losowanie.poczatek_losowania()
+        elif сozrobić == "losowania":
+            return losowanie.początek_losowania()
 
         
-        elif сozrobic == "powrót":
+        elif сozrobić == "powrót":
             print("No to wracamy!")
             return główne_okno.główne_okno()
 
         
-        elif сozrobic == "wyjście":
+        elif сozrobić == "wyjście":
             print("Do zobaczenia!")
             exit()
 
