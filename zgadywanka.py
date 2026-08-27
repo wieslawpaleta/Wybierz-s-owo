@@ -71,7 +71,7 @@ def zgadnij():
 
 
     else:
-        print(f"\nPrzegrałeś! Słowem było: {tajemnicze_słowo} \n")
+        print(f"\nPrzegrałeś, a tu słowo, którego szukałeś: {tajemnicze_słowo} \n")
 
 
     #Pętła wyboru trybów.

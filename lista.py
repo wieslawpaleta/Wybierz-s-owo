@@ -98,7 +98,7 @@ def generuj_listę_słów(język, a, b, c):
 
                 print("Wybierz pierwszą liczbę od 1 do 100: ")
                 a = int(input())
-                print("Wybierz drugą liczbę od 1 do 100(musi być większa niż pierwsza): ")
+                print("Wybierz drugą liczbę od 1 do 100 (musi być większa niż pierwsza): ")
                 b = int(input()) 
                 print("Wybierz trzecią liczbę od 1 do 3: ")
                 c = int(input())    
@@ -151,7 +151,7 @@ def generuj_listę_słów(język, a, b, c):
 
 
                 else:
-                    print("Wprowadzone liczby są nie spełniają warunków.")
+                    print("Wprowadzone liczby nie spełniają warunków.")
 
 
             except ValueError:

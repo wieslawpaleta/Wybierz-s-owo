@@ -10,7 +10,7 @@ def główne_okno():
 
 
     print("Cześć!")
-    tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\", \"Wybierz słowo\", \"Zgadywanka\", \"Wyjście\": ")
+    tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\", \"Lista\", \"Zgadywanka\", \"Wyjście\": ")
 
 
     while True:
@@ -21,7 +21,7 @@ def główne_okno():
                 return losowanie.początek_losowania()  
 
              
-            elif tryb.lower() == "wybierz słowo":
+            elif tryb.lower() == "lista":
                 return lista.wybierz_słowo()
 
             
@@ -36,7 +36,7 @@ def główne_okno():
                 
             else:
                 print("Masz ostatnie ostrzeżenie w tej chwili,\nmasz ostatnie ostrzeżenie!")
-                tryb = input("Wybierz tryb \"Losowanie\" albo \"Wybierz słowo\" albo \"Wyjście\": ")
+                tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\" albo \"Wybierz słowo\" albo \"Wyjście\": ")
 
 
         except ValueError:
