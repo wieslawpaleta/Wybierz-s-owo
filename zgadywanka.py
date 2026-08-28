@@ -10,7 +10,7 @@ import losowanie
 def zgadnij():
 
     
-    print("Zgadnij słowo w dziesięciu próbach.")
+    print("\nZgadnij słowo!")
 
 
     słowo = random.choice(zbiór_słów).lower()
@@ -30,7 +30,7 @@ def zgadnij():
     while próby < max_prób:
 
 
-        próba = input(f"\nPróba {próby + 1}/{max_prób} Podaj literę albo zgadnij słowo, albo wpisz \"Powrót\", aby powrócić do głównego okna, albo \"Wyjście\", aby zakończyć działanie programu: ").lower()
+        próba = input(f"\n(Próba {próby + 1}/{max_prób}) Podaj literę albo zgadnij słowo.\nWpisz \"Powrót\", żeby wrócić do głównego okna albo \"Wyjście\", żeby zakończyć działanie programu: ").lower()
 
 
         if próba.lower() == "wyjście":
@@ -39,6 +39,7 @@ def zgadnij():
 
             
         if próba.lower() == "powrót":
+            print("No to wracamy!\n")
             return główne_okno.główne_okno()
             
 
@@ -99,7 +100,7 @@ def zgadnij():
 
         
         elif сozrobić == "powrót":
-            print("No to wracamy!")
+            print("No to wracamy!\n")
             return główne_okno.główne_okno()
 
         

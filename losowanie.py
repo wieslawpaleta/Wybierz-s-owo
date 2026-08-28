@@ -15,7 +15,9 @@ def początek_losowania():
 
         dostępne_języki = """angielski (en), rosyjski (ru), hiszpański (es), francuski (fr), niemiecki (de)
 arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""  
-        print("Wylosuj słowo!\n")
+
+
+        print("\nWylosuj słowo!\n")
         print("DOSTĘPNE JĘZYKI:\n")
         print(dostępne_języki)
 
@@ -23,7 +25,7 @@ arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""
         while True:    
 
 
-            język = input("Wybierz język albo wybierz \"Powrót\" do głównego menu, albo \"Wyjście\", aby zakończyć działanie programu: ").strip().lower()  
+            język = input("Wybierz język albo \"Powrót\" do głównego menu, albo \"Wyjście\", aby zakończyć działanie programu: ").strip().lower()  
 
 
             if język == "en":
@@ -77,6 +79,7 @@ arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""
             
             
             elif język == "powrót":
+                print("No to wracamy!\n")
                 return główne_okno.główne_okno()
 
 
@@ -132,6 +135,7 @@ def losowanie_słowa(język):
 
                 
                 elif lufa_pytanie == "powrót":
+                    print("No to wracamy!\n")
                     return główne_okno.główne_okno()
 
                 

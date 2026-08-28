@@ -12,9 +12,16 @@ def wybierz_słowo():
 
     while True:
 
-
+        dostępne_języki = """angielski (en), rosyjski (ru), hiszpański (es), francuski (fr), niemiecki (de)
+        arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""  
+        
+        
+        print("\nStwórz listę!\n")
+        print("DOSTĘPNE JĘZYKI:\n")
+        print(dostępne_języki)
+        
         print("Wybierz język oraz trzy liczby całkowite z określonych zakresów, aby wygenerować listę słów.")
-        print("Wpisz 'Powrót', aby wrócić do głównego menu albo 'Wyjśćie', zakończyć działanie programu.")
+        print("Wpisz 'Powrót', jeśli chcesz wrócić do głównego menu albo 'Wyjście', jeśli chcesz zakończyć działanie programu.")
 
 
         while True:    
@@ -74,6 +81,7 @@ def wybierz_słowo():
 
             
             elif język == "powrót":
+                print("No to wracamy!\n")
                 return główne_okno.główne_okno()   
 
 
@@ -137,7 +145,7 @@ def generuj_listę_słów(język, a, b, c):
 
                         
                         elif сozrobić == "powrót":
-                            print("No to wracamy!")
+                            print("No to wracamy!\n")
                             return główne_okno.główne_okno()
 
                         
