@@ -30,17 +30,17 @@ def główne_okno():
 
             
             elif tryb.lower() == "wyjście":
-                print("Do zobaczenia!")
+                print("\nDo zobaczenia!")
                 exit()
 
                 
             else:
-                print("Masz ostatnie ostrzeżenie w tej chwili,\nmasz ostatnie ostrzeżenie!")
+                print("\nMasz ostatnie ostrzeżenie w tej chwili,\nmasz ostatnie ostrzeżenie!\n")
                 tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\" albo \"Wybierz słowo\" albo \"Wyjście\": ")
 
 
         except ValueError:
-            print("Posłuchaj dzieciaku!")
+            print("\nPosłuchaj dzieciaku!\n")
 
 
 #Dzięki temu można uruchomić program.

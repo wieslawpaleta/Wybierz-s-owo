@@ -13,11 +13,11 @@ def wybierz_słowo():
     while True:
 
         dostępne_języki = """angielski (en), rosyjski (ru), hiszpański (es), francuski (fr), niemiecki (de)
-        arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""  
+arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""  
         
         
         print("\nStwórz listę!\n")
-        print("DOSTĘPNE JĘZYKI:\n")
+        print("DOSTĘPNE JĘZYKI:")
         print(dostępne_języki)
         
         print("Wybierz język oraz trzy liczby całkowite z określonych zakresów, aby wygenerować listę słów.")
@@ -31,67 +31,67 @@ def wybierz_słowo():
 
 
             if język == "en":
-                print("Wybrałeś język angielski.")
+                print("\nWybrałeś język angielski.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "ru":
-                print("Wybrałeś język rosyjski.")
+                print("\nWybrałeś język rosyjski.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "es":
-                print("Wybrałeś język hiszpański.")
+                print("\nWybrałeś język hiszpański.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "fr":
-                print("Wybrałeś język francuski.")
+                print("\nWybrałeś język francuski.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "de":
-                print("Wybrałeś język niemiecki.")
+                print("\nWybrałeś język niemiecki.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "ar":
-                print("Wybrałeś język arabski.")
+                print("\nWybrałeś język arabski.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "ch":
-                print("Wybrałeś język chiński.")
+                print("\nWybrałeś język chiński.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "kr":
-                print("Wybrałeś język koreański.")
+                print("\nWybrałeś język koreański.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "jp":
-                print("Wybrałeś język japoński.")
+                print("\nWybrałeś język japoński.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "tj":
-                print("Wybrałeś język tajski.")
+                print("\nWybrałeś język tajski.")
                 return generuj_listę_słów(język, a=None, b=None, c=None)
 
             
             elif język == "powrót":
-                print("No to wracamy!\n")
+                print("\nNo to wracamy!\n")
                 return główne_okno.główne_okno()   
 
 
             elif język == "wyjście":
-                print("Do zobaczenia!")
+                print("\nDo zobaczenia!")
                 exit()   
 
             
             else:
-                print("Wybrany język jest nieobsługiwany.")
+                print("\nWybrany język jest nieobsługiwany.\n")
                 
 
 #Tutaj tworzy się lista.         
@@ -104,7 +104,7 @@ def generuj_listę_słów(język, a, b, c):
             try:
 
 
-                print("Wybierz pierwszą liczbę od 1 do 100: ")
+                print("\nWybierz pierwszą liczbę od 1 do 100: ")
                 a = int(input())
                 print("Wybierz drugą liczbę od 1 do 100 (musi być większa niż pierwsza): ")
                 b = int(input()) 
@@ -113,7 +113,7 @@ def generuj_listę_słów(język, a, b, c):
 
 
                 if 1 <= a <= 100 and 1 <= b <= 100 and a < b and 1 <= c <= 3:
-                    print("Twoja lista słów to: ")
+                    print("\nTwoja lista słów to: ")
                     for i in range(a - 1, b, c):
                         słowo_obce = słowniki[język][i]
                         słowo_pl = słowniki["pl"][i]
@@ -124,7 +124,7 @@ def generuj_listę_słów(język, a, b, c):
                     while True:     
 
 
-                        print("Wpisz 'Lista', aby stworzyć nową listę.")
+                        print("\nWpisz 'Lista', aby stworzyć nową listę.")
                         print("Wpisz 'Losowanie', aby przejść do trybu losowania.")
                         print("Wpisz 'Zgadywanka', aby przejść do trybu zgadywania.")
                         print("Wpisz 'Powrót', aby wrócić do głównego menu.")
@@ -145,12 +145,12 @@ def generuj_listę_słów(język, a, b, c):
 
                         
                         elif сozrobić == "powrót":
-                            print("No to wracamy!\n")
+                            print("\nNo to wracamy!\n")
                             return główne_okno.główne_okno()
 
                         
                         elif сozrobić == "wyjście":
-                            print("Do zobaczenia!")
+                            print("\nDo zobaczenia!")
                             exit()
 
 

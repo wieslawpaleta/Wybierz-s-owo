@@ -14,11 +14,11 @@ def początek_losowania():
 
 
         dostępne_języki = """angielski (en), rosyjski (ru), hiszpański (es), francuski (fr), niemiecki (de)
-arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""  
+arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""   
 
 
         print("\nWylosuj słowo!\n")
-        print("DOSTĘPNE JĘZYKI:\n")
+        print("DOSTĘPNE JĘZYKI:")
         print(dostępne_języki)
 
 
@@ -29,67 +29,67 @@ arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""
 
 
             if język == "en":
-                print("Wybrałeś język angielski.")
+                print("\nWybrałeś język angielski.")
                 return losowanie_słowa(język)
 
             
             elif język == "ru":
-                print("Wybrałeś język rosyjski.")
+                print("\nWybrałeś język rosyjski.")
                 return losowanie_słowa(język)
 
             
             elif język == "es":
-                print("Wybrałeś język hiszpański.")
+                print("\nWybrałeś język hiszpański.")
                 return losowanie_słowa(język)
 
             
             elif język == "fr":
-                print("Wybrałeś język francuski.")
+                print("\nWybrałeś język francuski.")
                 return losowanie_słowa(język)
 
             
             elif język == "de":
-                print("Wybrałeś język niemiecki.")
+                print("\nWybrałeś język niemiecki.")
                 return losowanie_słowa(język)
 
             
             elif język == "ar":
-                print("Wybrałeś język arabski.")
+                print("\nWybrałeś język arabski.")
                 return losowanie_słowa(język)
 
             
             elif język == "ch":
-                print("Wybrałeś język chiński.")
+                print("\nWybrałeś język chiński.")
                 return losowanie_słowa(język)
 
             
             elif język == "kr":
-                print("Wybrałeś język koreański.")
+                print("\nWybrałeś język koreański.")
                 return losowanie_słowa(język)
 
             
             elif język == "jp":
-                print("Wybrałeś język japoński.")
+                print("\nWybrałeś język japoński.")
                 return losowanie_słowa(język)
 
             
             elif język == "tj":
-                print("Wybrałeś język tajski.")
+                print("\nWybrałeś język tajski.")
                 return losowanie_słowa(język)
             
             
             elif język == "powrót":
-                print("No to wracamy!\n")
+                print("\nNo to wracamy!\n")
                 return główne_okno.główne_okno()
 
 
             elif język == "wyjście":
-                print("Do zobaczenia!")
+                print("\nDo zobaczenia!")
                 exit()
 
             
             else:
-                print("Wybrany język jest nieobsługiwany.")
+                print("\nWybrany język jest nieobsługiwany.\n")
                 
 
 #Tutaj dokonuje się losowanie słowa.                
@@ -99,7 +99,7 @@ def losowanie_słowa(język):
         while True:
 
 
-            gamba = input("Czy chcesz wylosować słowo? (tak/nie): ").strip().lower()
+            gamba = input("\nCzy chcesz wylosować słowo? (tak/nie): ").strip().lower()
 
 
             if gamba == "tak":
@@ -107,16 +107,16 @@ def losowanie_słowa(język):
                 if 1 <= maszyna <= 100:
                     słowo_obce = słowniki[język][maszyna - 1]
                     słowo_polskie = słowniki["pl"][maszyna - 1]
-                    print("Wylosowane słowo to: \n" + słowo_obce + "-" + słowo_polskie)
+                    print("\nWylosowane słowo to: \n" + słowo_obce + "-" + słowo_polskie)
 
 
             #Tutaj można wybrać tryb, wrócić do głównego okna lub wyjść z programu.
             elif gamba == "nie":
 
 
-                print("Wpisz 'Losowanie', aby rozpocząć nowe losowanie.")    
+                print("\nWpisz 'Losowanie', aby rozpocząć nowe losowanie.")    
                 print("Wpisz 'Lista', aby przejść do trybu listy.")
-                print("Wpisz 'Zgadywanka', aby przejść do trybu zgadywania.")
+                print("Wpisz 'Zgadywanka', aby przejść do trybu zgadywanki.")
                 print("Wpisz 'Powrót', aby wrócić do głównego menu.")
                 print("Wpisz 'Wyjście', aby zakończyć działanie programu.")
                 lufa_pytanie = input("Co chcesz teraz zrobić?: ").strip().lower()
@@ -126,7 +126,7 @@ def losowanie_słowa(język):
                     return początek_losowania()
                
 
-                elif lufa_pytanie == "wybór słowa":
+                elif lufa_pytanie == "lista":
                     return lista.wybierz_słowo()
 
                 
@@ -135,19 +135,19 @@ def losowanie_słowa(język):
 
                 
                 elif lufa_pytanie == "powrót":
-                    print("No to wracamy!\n")
+                    print("\nNo to wracamy!\n")
                     return główne_okno.główne_okno()
 
                 
                 elif lufa_pytanie == "wyjście":
-                    print("Do zobaczenia!")
+                    print("\nDo zobaczenia!")
                     exit()
             
                 
                 else:
-                    print("Niepoprawna opcja. Spróbuj ponownie.")
+                    print("\nNiepoprawna opcja. Spróbuj ponownie.\n")
 
 
             else:
-                print("Niepoprawna odpowiedź. Wpisz 'tak' lub 'nie'.")
+                print("\nNiepoprawna odpowiedź. Wpisz 'tak' lub 'nie'.\n")
         

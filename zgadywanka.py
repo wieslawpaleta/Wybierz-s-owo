@@ -34,22 +34,22 @@ def zgadnij():
 
 
         if próba.lower() == "wyjście":
-            print("Do zobaczenia!")
+            print("\nDo zobaczenia!")
             exit()
 
             
         if próba.lower() == "powrót":
-            print("No to wracamy!\n")
+            print("\nNo to wracamy!\n")
             return główne_okno.główne_okno()
             
 
         if próba == tajemnicze_słowo:
-            print("Brawo! Odgadłeś słowo!")
+            print("\nBrawo! Odgadłeś słowo!\n")
             break
 
 
         if len(próba) != 1 or not próba.isalpha():
-            print("Podaj jedną literę albo słowo (bez cyfr i symboli)!")
+            print("\nPodaj jedną literę albo słowo (bez cyfr i symboli)!")
             continue
 
         
@@ -60,11 +60,11 @@ def zgadnij():
             
 
         wynik_wyświetlany = " ".join(zakreskowane_słowo)
-        print("Aktualny stan słowa:", wynik_wyświetlany)
+        print("\nAktualny stan słowa:", wynik_wyświetlany)
             
         
         if "_" not in zakreskowane_słowo:
-            print("\nGratulacje! Odgadłeś słowo!")
+            print("\nGratulacje! Odgadłeś słowo!\n")
             break
 
 
@@ -95,22 +95,22 @@ def zgadnij():
             return lista.wybierz_słowo()
 
         
-        elif сozrobić == "losowania":
+        elif сozrobić == "losowanie":
             return losowanie.początek_losowania()
 
         
         elif сozrobić == "powrót":
-            print("No to wracamy!\n")
+            print("\nNo to wracamy!\n")
             return główne_okno.główne_okno()
 
         
         elif сozrobić == "wyjście":
-            print("Do zobaczenia!")
+            print("\nDo zobaczenia!")
             exit()
 
 
         else:
-            print("Spróbuj jeszcze raz.")
+            print("\nSpróbuj jeszcze raz.\n")
 
      
 
