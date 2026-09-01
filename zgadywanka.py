@@ -23,7 +23,7 @@ def zgadnij():
 
 
     próby = 0
-    max_prób = 10
+    max_prób = len(tajemnicze_słowo) * 3
 
 
     #Pętla zgadywania słowa z możliwością powrótu do głównego menu oraz zakończenia działania programu.
@@ -49,7 +49,8 @@ def zgadnij():
 
 
         if len(próba) != 1 or not próba.isalpha():
-            print("\nPodaj jedną literę albo słowo (bez cyfr i symboli)!")
+            print("\nPodaj jedną literę albo poprawne słowo (bez cyfr i symboli)!")
+            próby += 1
             continue
 
         
