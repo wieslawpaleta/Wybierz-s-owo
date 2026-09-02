@@ -3,14 +3,14 @@
 import losowanie
 import lista
 import zgadywanka
-import dodanie_słów
+import edytor_słowników
 
 #Główne okno wyboru.
 def główne_okno():
 
 
     print("Cześć!")
-    tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\", \"Lista\", \"Zgadywanka\", \"Wyjście\", \"Dodanie słów\": ")
+    tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\", \"Lista\", \"Zgadywanka\", \"Wyjście\", \"Edytor słowników\": ")
 
 
     while True:
@@ -29,8 +29,8 @@ def główne_okno():
                 return zgadywanka.zgadnij()
 
 
-            elif tryb.lower() == "dodanie słów":
-                return dodanie_słów.edytor_zbioru()
+            elif tryb.lower() == "edytor słowników":
+                return edytor_słowników.edytor_zbioru()
 
             
             elif tryb.lower() == "wyjście":
