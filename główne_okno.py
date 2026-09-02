@@ -30,7 +30,7 @@ def główne_okno():
 
 
             elif tryb.lower() == "dodanie słów":
-                return dodanie_słów.rozszerzenie_zbioru()
+                return dodanie_słów.edytor_zbioru()
 
             
             elif tryb.lower() == "wyjście":
