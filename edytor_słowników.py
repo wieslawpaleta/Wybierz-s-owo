@@ -33,15 +33,20 @@ def edytor_zbioru():
 
 
             dodatek = input("\nWprowadź słowe, które chcesz dodać: ")
-            zbiór_słów.append(dodatek)
-            print("\nSłowo zostało dodane")
 
 
-            with open(SCIEZKA_JSON, "w", encoding="utf-8") as archivo:
-                json.dump(zbiór_słów, archivo, ensure_ascii=False, indent=4)
+            if dodatek in zbiór_słów:
+                print("\nSłowo już istnieje w zbiorze.")
+            else:
+                zbiór_słów.append(dodatek)
+                print("\nSłowo zostało dodane")
 
 
-            print("\nLista actualizada y guardada en lista_palabras.json")
+                with open(SCIEZKA_JSON, "w", encoding="utf-8") as archivo:
+                    json.dump(zbiór_słów, archivo, ensure_ascii=False, indent=4)
+
+
+                    print("\nLista actualizada y guardada en lista_palabras.json")
 
 
         elif cochceszzrobić.lower() == "usuń":
