@@ -37,6 +37,12 @@ def edytor_zbioru():
 
             if dodatek in zbiór_słów:
                 print("\nSłowo już istnieje w zbiorze.")
+
+
+            elif not dodatek.replace("-", "").isalpha():
+                print("\nNieprawidłowy format słowa. Wprowadź tylko litery.")
+
+                
             else:
                 zbiór_słów.append(dodatek)
                 print("\nSłowo zostało dodane")
@@ -77,6 +83,4 @@ def edytor_zbioru():
 
         else:  
             print("\nNiepoprawna opcja. Spróbuj ponownie.")
-
-
 
