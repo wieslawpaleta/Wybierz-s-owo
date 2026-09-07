@@ -16,7 +16,7 @@ def edytor_zbioru():
 
     while True:
 
-        cochceszzrobić = input("\nWpisz:\n1) \"Wyświetl\",aby wyświetlić zbiór,\n2) \"Dodaj\",aby dodać słowo,\n3) \"Usuń\",aby usunąć słowo,\n4) \"Powrót\",aby wrócić do głównego menu:")
+        cochceszzrobić = input("\nWpisz:\n1) \"Wyświetl\",aby wyświetlić zbiór,\n2) \"Dodaj\",aby dodać słowo,\n3) \"Usuń\",aby usunąć słowo,\n4) \"Powrót\",aby wrócić do głównego menu: ")
 
         if cochceszzrobić.lower() == "wyświetl":
             print("\nLista słów:")
@@ -39,7 +39,7 @@ def edytor_zbioru():
                 print("\nSłowo już istnieje w zbiorze.")
 
 
-            elif not dodatek.replace("-", "").isalpha():
+            elif not dodatek.isalpha():
                 print("\nNieprawidłowy format słowa. Wprowadź tylko litery.")
 
                 
