@@ -10,7 +10,7 @@ def główne_okno():
 
 
     print("Cześć!")
-    tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\", \"Lista\", \"Zgadywanka\", \"Wyjście\", \"Edytor słowników\": ")
+    tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\", \"Lista\", \"Zgadywanka\", \"Edytor słowników\", \"Wyjście\": ")
 
 
     while True:
