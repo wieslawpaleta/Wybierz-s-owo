@@ -4,6 +4,7 @@ import losowanie
 import lista
 import zgadywanka
 import edytor_słowników
+import przeliterowanie
 
 #Główne okno wyboru.
 def główne_okno():
@@ -31,6 +32,10 @@ def główne_okno():
 
             elif tryb.lower() == "edytor słowników":
                 return edytor_słowników.edytor_zbioru()
+
+
+            elif tryb.lower() == "przeliterowanie":
+                return przeliterowanie.przeliteruj()
 
             
             elif tryb.lower() == "wyjście":
