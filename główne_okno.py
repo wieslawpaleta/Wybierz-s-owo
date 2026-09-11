@@ -11,7 +11,16 @@ def główne_okno():
 
 
     print("Cześć!")
-    tryb = input("Wybierz i wpisz nazwę jednego z trybów: \"Losowanie\", \"Lista\", \"Zgadywanka\", \"Edytor słowników\", \"Wyjście\": ")
+    print("-" * 10)
+    print("Dostępne tryby do wyboru:\n")
+    print("1) \"Losowanie\"")
+    print("2) \"Lista\"")
+    print("3) \"Zgadywanka\"")
+    print("4) \"Edytor słowników\"")
+    print("5) \"Przeliterowanie\"")
+    print("6) \"Wyjście\"\n")
+    print("-" * 10)
+    tryb = input("Co zamierzasz: ")
 
 
     while True:
