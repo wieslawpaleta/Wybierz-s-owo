@@ -15,8 +15,14 @@ def edytor_zbioru():
 
 
     while True:
-
-        cochceszzrobić = input("\nWpisz:\n1) \"Wyświetl\",aby wyświetlić zbiór,\n2) \"Dodaj\",aby dodać słowo,\n3) \"Usuń\",aby usunąć słowo,\n4) \"Powrót\",aby wrócić do głównego menu: ")
+        print("-" * 10)
+        print("Dostępne opcje:\n")
+        print("1) \"Wyświetl\"")
+        print("2) \"Dodaj\"")
+        print("3) \"Usuń\"")
+        print("4) \"Powrót\"\n")
+        print("-" * 10)    
+        cochceszzrobić = input("\nCo zamierzasz? ")
 
         if cochceszzrobić.lower() == "wyświetl":
             print("\nLista słów:")
@@ -52,7 +58,7 @@ def edytor_zbioru():
                     json.dump(zbiór_słów, archivo, ensure_ascii=False, indent=4)
 
 
-                    print("\nLista actualizada y guardada en lista_palabras.json")
+                    print("\nZmiany zostały wprowadzone.")
 
 
         elif cochceszzrobić.lower() == "usuń":
@@ -68,7 +74,7 @@ def edytor_zbioru():
                     json.dump(zbiór_słów, archivo, ensure_ascii=False, indent=4)
 
 
-                print("\nLista actualizada y guardada en lista_palabras.json")
+                print("\nZmiany zostały wprowadzone.")
 
 
             elif usuwanie not in zbiór_słów:
