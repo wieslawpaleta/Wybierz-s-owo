@@ -15,6 +15,7 @@ def edytor_zbioru():
 
 
     while True:
+        print()
         print("-" * 10)
         print("Dostępne opcje:\n")
         print("1) \"Wyświetl\"")

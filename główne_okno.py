@@ -20,7 +20,7 @@ def główne_okno():
     print("5) \"Przeliterowanie\"")
     print("6) \"Wyjście\"\n")
     print("-" * 10)
-    tryb = input("Co zamierzasz: ")
+    tryb = input("Co zamierzasz? ")
 
 
     while True:

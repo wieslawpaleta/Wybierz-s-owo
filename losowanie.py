@@ -11,21 +11,28 @@ def początek_losowania():
 
 
     while True:
+        print("Wylosuj słowo!\n")
+        print("-" * 10)
+        print("Dostępne opcje:\n")
+        print("1) Wybierz język")
+        print("2) \"Powrót\"")
+        print("3) \"Wyjście\"\n")
+        print("-" * 10)
 
 
         dostępne_języki = """angielski (en), rosyjski (ru), hiszpański (es), francuski (fr), niemiecki (de)
-arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""   
+arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj)"""   
 
-
-        print("\nWylosuj słowo!\n")
+       
         print("DOSTĘPNE JĘZYKI:")
         print(dostępne_języki)
+        print("-" * 10)
 
 
         while True:    
 
 
-            język = input("Wybierz język albo \"Powrót\" do głównego menu, albo \"Wyjście\", aby zakończyć działanie programu: ").strip().lower()  
+            język = input("Co zamierzasz? ").strip().lower()  
 
 
             if język == "en":
