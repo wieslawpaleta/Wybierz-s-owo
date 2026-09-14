@@ -24,7 +24,7 @@ def początek_losowania():
 arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj)"""   
 
        
-        print("DOSTĘPNE JĘZYKI:")
+        print("DOSTĘPNE JĘZYKI:\n")
         print(dostępne_języki)
         print("-" * 10)
 
