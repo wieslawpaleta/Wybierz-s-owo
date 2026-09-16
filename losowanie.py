@@ -11,12 +11,12 @@ def początek_losowania():
 
 
     while True:
-        print("Wylosuj słowo!\n")
+        print("\nWylosuj słowo!\n")
         print("-" * 10)
         print("Dostępne opcje:\n")
         print("1) Wybierz język")
         print("2) \"Powrót\"")
-        print("3) \"Wyjście\"\n")
+        print("3) \"Wyjście\"")
         print("-" * 10)
 
 

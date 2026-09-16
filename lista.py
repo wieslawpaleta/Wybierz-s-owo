@@ -10,24 +10,29 @@ import zgadywanka
 def wybierz_słowo():
 
 
-    while True:
-
-        dostępne_języki = """angielski (en), rosyjski (ru), hiszpański (es), francuski (fr), niemiecki (de)
-arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj).\n"""  
-        
-        
+    while True:        
         print("\nStwórz listę!\n")
-        print("DOSTĘPNE JĘZYKI:")
+        print("-" * 10)
+        print("Dostępne opcje:\n")
+        print("1) Wybierz język")
+        print("2) \"Powrót\"")
+        print("3) \"Wyjście\"")
+        print("-" * 10)
+       
+       
+        dostępne_języki = """angielski (en), rosyjski (ru), hiszpański (es), francuski (fr), niemiecki (de)
+arabski (ar), chiński (ch), koreański (kr), japoński (jp), tajski (tj)"""   
+       
+              
+        print("DOSTĘPNE JĘZYKI:\n")
         print(dostępne_języki)
-        
-        print("Wybierz język oraz trzy liczby całkowite z określonych zakresów, aby wygenerować listę słów.")
-        print("Wpisz 'Powrót', jeśli chcesz wrócić do głównego menu albo 'Wyjście', jeśli chcesz zakończyć działanie programu.")
+        print("-" * 10)
 
 
         while True:    
 
 
-            język = input("Wybierz język: ").strip().lower()
+            język = input("Co zamierasz? ").strip().lower()
 
 
             if język == "en":

@@ -33,9 +33,9 @@ def zgadnij():
         print("Dostępne opcje:\n")
         print("1) Zgadnij literę lub słowo,")
         print("2) Wpisz \"Powrót\", żeby wrócić do głównego okna,")
-        print("3) Wpisz \"Wyjście\", żeby zakończyć działanie programu.\n")
+        print("3) Wpisz \"Wyjście\", żeby zakończyć działanie programu.")
         print("-" * 10)
-        próba = input(f"(Próba {próby + 1}/{max_prób}) Podaj literę lub zgadnij słowo: ").lower()
+        próba = input(f"(Próba {próby + 1}/{max_prób}) co zamierzasz: ").lower()
 
 
         if próba.lower() == "wyjście":

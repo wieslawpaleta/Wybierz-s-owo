@@ -9,13 +9,13 @@ def przeliteruj():
         print("Dostępne opcje:\n")
         print("1) Wpisz słowo, które chcesz przeliterować,")
         print("2) Wpisz \"Pwrt\", żeby wrócić do głównego okna,")
-        print("3) Wpisz \"Wsc\", żeby zakończyć działanie programu.\n")
+        print("3) Wpisz \"Wsc\", żeby zakończyć działanie programu.")
         print("-" * 10)
         rozkład = input("Co zamierzasz? ")
 
 
         if rozkład.lower() == "pwrt":
-            print("\nNo to wracamy!")
+            print("\nNo to wracamy!\n")
             return główne_okno.główne_okno()
         
         

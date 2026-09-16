@@ -21,7 +21,7 @@ def edytor_zbioru():
         print("1) \"Wyświetl\"")
         print("2) \"Dodaj\"")
         print("3) \"Usuń\"")
-        print("4) \"Powrót\"\n")
+        print("4) \"Powrót\"")
         print("-" * 10)    
         cochceszzrobić = input("\nCo zamierzasz? ")
 

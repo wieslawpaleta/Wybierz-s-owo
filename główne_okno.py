@@ -18,7 +18,7 @@ def główne_okno():
     print("3) \"Zgadywanka\"")
     print("4) \"Edytor słowników\"")
     print("5) \"Przeliterowanie\"")
-    print("6) \"Wyjście\"\n")
+    print("6) \"Wyjście\"")
     print("-" * 10)
     tryb = input("Co zamierzasz? ")
 
